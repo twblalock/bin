@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+usage="Usage: random min max"
+
+if [ -z $1 ] || [ -z $2 ] || (( $1 > $2 )); then
+    echo -e ${usage}
+    exit 1
+fi
+
+echo `awk -v min=${1} -v max=${2} 'BEGIN { srand(); printf("%d", (rand() * (max - min + 1)) + min) }'`
