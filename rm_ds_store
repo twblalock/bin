@@ -1,0 +1,8 @@
+#! /usr/bin/env bash -x
+
+if [ -z $1 ]; then
+    echo "Usage: clean_ds_store directory"
+    exit 1
+fi
+
+find "${1}" -name .DS_Store -ok rm {} \;
