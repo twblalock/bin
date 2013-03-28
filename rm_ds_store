@@ -1,4 +1,4 @@
-#! /usr/bin/env bash -x
+#!/bin/bash
 
 if [ -z $1 ]; then
     echo "Usage: rm_ds_store directory"
