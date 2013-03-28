@@ -1,7 +1,7 @@
 #! /usr/bin/env bash -x
 
 if [ -z $1 ]; then
-    echo "Usage: clean_ds_store directory"
+    echo "Usage: rm_ds_store directory"
     exit 1
 fi
 
