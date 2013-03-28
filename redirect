@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 
-curl -s -w "%{redirect_url}" "${1}"
+curl -s -w "%{redirect_url}" ${1} -o /dev/null
+echo ""
