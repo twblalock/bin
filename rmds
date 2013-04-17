@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ -z $1 ]; then
-    echo "Usage: rm_ds_store directory"
+    echo "Usage: rmds directory"
     exit 1
 fi
 
