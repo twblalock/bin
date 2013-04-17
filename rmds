@@ -5,4 +5,4 @@ if [ -z $1 ]; then
     exit 1
 fi
 
-find "${1}" -name .DS_Store -ok rm {} \;
+find "${1}" -name .DS_Store -exec rm {} \;
