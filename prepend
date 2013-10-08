@@ -12,7 +12,7 @@ shift
 
 while (( "$#" )); do
     if [ -w $1 ]; then
-	echo ${string} > ${1}_tmp
+	printf ${string} > ${1}_tmp
 	cat $1 >> ${1}_tmp
 	mv -f ${1}_tmp $1
     else
