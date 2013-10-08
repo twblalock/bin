@@ -1,0 +1,23 @@
+#!/bin/bash
+
+usage="Usage: prepend string filenames"
+
+if (( $# < 2 )); then
+    echo -e ${usage}
+    exit 1
+fi
+
+string=$1
+shift
+
+while (( "$#" )); do
+    if [ -w $1 ]; then
+	echo ${string} > ${1}_tmp
+	cat $1 >> ${1}_tmp
+	mv -f ${1}_tmp $1
+    else
+	echo "cannot write file: ${1}"
+    fi
+
+    shift
+done
