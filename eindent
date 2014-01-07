@@ -1,0 +1,4 @@
+# Uses emacs to indent files
+#! /bin/bash
+
+find . -name ${1} -exec emacs -nw {} --eval "(progn (mark-whole-buffer) (indent-region (point-min) (point-max) nil) (save-buffer))" --kill \;
